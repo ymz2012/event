@@ -1,0 +1,23 @@
+nav{
+    background: #ccc;
+    height: 50px;
+}
+
+#banner{
+    background: #777;
+    height: 700px;
+}
+
+nav ul{
+    list-style: none; /*  不要样式 也就是前面的点 */
+    margin: 0;
+}
+
+nav ul li{
+    display: inline-block; /* 让横着排列 */
+    line-height: 50px;
+}
+
+nav ul li a{
+    line-height: 50px;
+}
