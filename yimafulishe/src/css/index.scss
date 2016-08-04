@@ -1,0 +1,114 @@
+@import "./sassmixins/mixins";
+@import "../cdn/myreset.min.css";
+
+html,body{
+  width:100%;
+  height:100%;
+  .yiMaWrap{
+    width:100%;
+    height:100%;
+    .yiMaBanner{
+      width:100%;
+      height:100%;
+      .yiMaUl{
+        width:100%;
+        .yiMaLi{
+          width:100%;
+          height:px2rem(230px);
+          margin-bottom:px2rem(5px);
+          position:relative;
+        }
+        .yiMaLi:nth-child(1){
+          width:100%;
+          height:px2rem(400px);
+        }
+
+
+        .yiMaLi:nth-of-type(even){
+          background: black;
+        }
+        .yiMaLi:nth-child(7){
+          background: #00f;
+          margin-bottom:0;
+        }
+        #yiMaLi1{
+          .update{
+            width:px2rem(85px);
+            height:px2rem(40px);
+            background:#ff85c1;
+            position:absolute;
+            left:0;
+            top:px2rem(20px);
+            border-radius:0 5px 5px 0;
+            font-size:px2rem(22px);
+            line-height:px2rem(43px);
+            text-align:center;
+            -webkit-text-size-adjust: none;
+            color:#fff;
+          }
+          .content{
+            width:100%;
+            height:px2rem(285px);
+            position:absolute;
+            left:0;
+            bottom:0;
+            padding-top:px2rem(20px);
+            
+            .date{
+              width:px2rem(110px);
+              height:px2rem(30px);
+              margin:0 auto;
+              line-height:px2rem(40px);
+              text-align:center;
+              font-size:px2rem(16px);
+              clear:both;
+              &:before{
+                content:"#";
+                width:px2rem(15px);
+                height:px2rem(30px);
+                float: left;
+              }
+              &:after{
+                content:"#";
+                width:px2rem(15px);
+                height:px2rem(30px);
+                float:right;
+              }
+            }
+            .solid{
+              width:px2rem(80px);
+              height:1px;
+              background:#000;
+              margin:px2rem(20px) auto 0;
+            }
+            .title{
+              margin:px2rem(35px) auto;
+              text-align:center;
+              background:red;
+              font-size:px2rem(40px);
+              &:before{
+                content:"";
+                width:px2rem(15px);
+                height:100%;
+                background:url("../images/title.png") no-repeat center;
+                background-size:100%;
+                display:inline-block;
+
+              }
+              &:after{
+                content:"";
+                width:px2rem(15px);
+                height:100%;
+                background:url("../images/title.png") no-repeat center;
+                background-size:100%;
+                -webkit-transform:rotate(180deg);
+                display:inline-block;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import url(../cdn/myreset.min.css);
+* {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+  html .yiMaWrap, body .yiMaWrap {
+    width: 100%;
+    height: 100%; }
+    html .yiMaWrap .yiMaBanner, body .yiMaWrap .yiMaBanner {
+      width: 100%;
+      height: 100%; }
+      html .yiMaWrap .yiMaBanner .yiMaUl, body .yiMaWrap .yiMaBanner .yiMaUl {
+        width: 100%; }
+        html .yiMaWrap .yiMaBanner .yiMaUl .yiMaLi, body .yiMaWrap .yiMaBanner .yiMaUl .yiMaLi {
+          width: 100%;
+          height: 3.06667rem;
+          margin-bottom: 0.06667rem;
+          position: relative; }
+        html .yiMaWrap .yiMaBanner .yiMaUl .yiMaLi:nth-child(1), body .yiMaWrap .yiMaBanner .yiMaUl .yiMaLi:nth-child(1) {
+          width: 100%;
+          height: 5.33333rem; }
+        html .yiMaWrap .yiMaBanner .yiMaUl .yiMaLi:nth-of-type(even), body .yiMaWrap .yiMaBanner .yiMaUl .yiMaLi:nth-of-type(even) {
+          background: black; }
+        html .yiMaWrap .yiMaBanner .yiMaUl .yiMaLi:nth-child(7), body .yiMaWrap .yiMaBanner .yiMaUl .yiMaLi:nth-child(7) {
+          background: #00f;
+          margin-bottom: 0; }
+        html .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .update, body .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .update {
+          width: 1.13333rem;
+          height: 0.53333rem;
+          background: #ff85c1;
+          position: absolute;
+          left: 0;
+          top: 0.26667rem;
+          border-radius: 0 5px 5px 0;
+          font-size: 0.29333rem;
+          line-height: 0.57333rem;
+          text-align: center;
+          -webkit-text-size-adjust: none;
+          color: #fff; }
+        html .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content, body .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content {
+          width: 100%;
+          height: 3.8rem;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding-top: 0.26667rem; }
+          html .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .date, body .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .date {
+            width: 1.46667rem;
+            height: 0.4rem;
+            margin: 0 auto;
+            line-height: 0.53333rem;
+            text-align: center;
+            font-size: 0.21333rem;
+            clear: both; }
+            html .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .date:before, body .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .date:before {
+              content: "#";
+              width: 0.2rem;
+              height: 0.4rem;
+              float: left; }
+            html .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .date:after, body .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .date:after {
+              content: "#";
+              width: 0.2rem;
+              height: 0.4rem;
+              float: right; }
+          html .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .solid, body .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .solid {
+            width: 1.06667rem;
+            height: 1px;
+            background: #000;
+            margin: 0.26667rem auto 0; }
+          html .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .title, body .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .title {
+            margin: 0.46667rem auto;
+            text-align: center;
+            background: red;
+            font-size: 0.53333rem; }
+            html .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .title:before, body .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .title:before {
+              content: "";
+              width: 0.2rem;
+              height: 100%;
+              background: url("../images/title.png") no-repeat center;
+              background-size: 100%;
+              display: inline-block; }
+            html .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .title:after, body .yiMaWrap .yiMaBanner .yiMaUl #yiMaLi1 .content .title:after {
+              content: "";
+              width: 0.2rem;
+              height: 100%;
+              background: url("../images/title.png") no-repeat center;
+              background-size: 100%;
+              -webkit-transform: rotate(180deg);
+              display: inline-block; }
+
+/*# sourceMappingURL=index.css.map */
