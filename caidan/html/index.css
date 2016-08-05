@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu{
+    background: #eee;
+    width: 600px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+ul{
+    list-style: none; /*去掉前面的点*/
+}
+
+ul li{
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+}
+
+a{
+    text-decoration: none; /*去掉下划线*/
+    color: #000;
+    display: block;
+    width: 90px;
+}
+
+a:hover{
+    color: #FFF;
+    background: #666;
+}
+
+ul li ul li{
+    float: none;
+    border-left: none;
+    margin-top: 2px;
+    background-color: #eee;
+}
+
+ul li ul{
+    display: none;
+    width: 90px;
+    position: absolute;
+}
+ul li:hover ul{
+    display: block;
+}
