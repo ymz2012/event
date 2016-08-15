@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="./src/"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>月饼代表你的心</title>
+
+    <script>
+        !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>2000&&(a=2000*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=!y.match(/android/gi),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+    </script>
+    <script>
+        var browser={versions:function(){var u=navigator.userAgent,app=navigator.appVersion;return{webKit:u.indexOf('AppleWebKit')>-1,ios:!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:u.indexOf('Android')>-1||u.indexOf('Linux')>-1,weixin:u.indexOf('MicroMessenger')>-1,txnews:u.indexOf('qqnews')>-1,sinawb:u.indexOf('weibo')>-1,mqq:u.indexOf('QQ')>-1};}(),language:(navigator.browserLanguage||navigator.language).toLowerCase()};var html="@font-face {font-family: 'HY QIHEI35';src: url('font/HYQiHei-35S.otf');}"+"@font-face {font-family: 'HY QIHEI50';src: url('font/HYQiHei-50S.otf');}";var dHtml=document.createElement("style");dHtml.innerHTML=html;if(browser.versions.android){document.getElementsByTagName("head")[0].appendChild(dHtml);}
+    </script>
+
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+<div class="mui-content">
+    <h1>月饼代表你的心</h1>
+    <p>嘘!我能根据你爱吃的月饼,知道你是什么人呦~<br>御姐范小萝莉统统先出原型<br>不行来试试</p>
+    <label>1.输入你的名字:</label><br>
+    <input type="text" value="" name="myName" /><br>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">设定年份区间</h5>
+        <button id='demo2' data-options='{"type":"date","beginYear":2009,"endYear":2016}' class="btn mui-btn mui-btn-block">选择日期 ...</button>
+        <div id='result' class="ui-alert"></div>
+    </div>
+</div>
+<!--
+<label>3.请选择你爱吃的月饼</label><br>
+<select name="yuebing" id="yuebing">
+    <option value="草莓味月饼">草莓味月饼</option>
+    <option value="榴莲味月饼">榴莲味月饼</option>
+    <option value="芒果味月饼">芒果味月饼</option>
+    <option value="香蕉味月饼">香蕉味月饼</option>
+</select><br>
+<input type="submit" value="上传照片" name="submit" />
+-->
+<script src="js/zepto.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script>
+    (function($,window) {
+        var result = $('#result');
+        var btns = $('.btn');
+        btns.each(function(i, btn) {
+            btn.addEventListener('click', function() {
+                var optionsJson = $(this).data('options') || '{}';
+                console.log($(this).data('options') || '{}');
+                var options;
+                if(typeof optionsJson=='string'){
+                    options= JSON.parse(optionsJson);
+                }else {
+                    options= optionsJson;
+                }
+
+                /*
+                 * 首次显示时实例化组件
+                 * 示例为了简洁，将 options 放在了按钮的 dom 上
+                 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                 */
+
+                var picker = new mui.DtPicker(options);
+                picker.show(function(rs) {
+                    /*
+                     * rs.value 拼合后的 value
+                     * rs.text 拼合后的 text
+                     * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                     * rs.m 月，用法同年
+                     * rs.d 日，用法同年
+                     * rs.h 时，用法同年
+                     * rs.i 分（minutes 的第二个字母），用法同年
+                     */
+                    /*
+                     * 返回 false 可以阻止选择框的关闭
+                     * return false;
+                     */
+                    /*
+                     * 释放组件资源，释放后将将不能再操作组件
+                     * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+                     * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+                     * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+                     */
+                });
+            }, false);
+        });
+    })(Zepto,window);
+</script>
+</body>
+</html>
