@@ -1,0 +1,62 @@
+@import url(../cdn/myreset.min.css);
+* {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.content {
+  width: 10rem;
+  height: 17.78667rem;
+  position: relative;
+  background: url("../images/xiazai_bg.jpg") no-repeat center center;
+  background-size: 100% 100%; }
+  .content .top_float {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: url("../images/yima_top_float.png") no-repeat center center;
+    background-size: 100% 100%;
+    width: 10rem;
+    height: 1.6rem;
+    padding-right: 0.37333rem;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: end;
+    box-sizing: border-box; }
+    .content .top_float .btn {
+      width: 1.89333rem;
+      height: 0.85333rem;
+      display: block; }
+  .content .xiazai_btn {
+    display: block;
+    width: 8rem;
+    height: 1.33333rem;
+    border-radius: 0.66667rem;
+    background: #ff8698;
+    color: #fff;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-size: 18px;
+    font-family: "HY QIHEI50" !important;
+    position: absolute;
+    bottom: 1.06667rem;
+    right: 50%;
+    margin-right: -4rem; }
+    [data-dpr="2"] .content .xiazai_btn {
+      font-size: 36px; }
+      @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+        [data-dpr="2"] .content .xiazai_btn {
+          font-size: 72px; } }
+    [data-dpr="3"] .content .xiazai_btn {
+      font-size: 54px; }
+      @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+        [data-dpr="3"] .content .xiazai_btn {
+          font-size: 108px; } }
+    @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+      .content .xiazai_btn {
+        font-size: 36px; } }
+
+/*# sourceMappingURL=survey.css.map */
