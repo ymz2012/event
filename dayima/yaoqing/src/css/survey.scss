@@ -1,0 +1,47 @@
+@import "./sassmixins/mixins";
+@import "../cdn/myreset.min.css";
+  .content{
+    width:px2rem(750px);
+    height:px2rem(1334px);
+    position: relative;
+    background:url("../images/xiazai_bg.jpg") no-repeat center center;
+    background-size: 100% 100%;
+      .top_float{
+        position: fixed;
+        top:0;
+        right:0;
+        left:0;
+        background:url("../images/yima_top_float.png") no-repeat center center;
+        background-size:100% 100%;
+        width:px2rem(750px);
+        height:px2rem(120px);
+        padding-right: px2rem(28px);
+        text-align: left;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: end;
+        box-sizing: border-box;
+        .btn{
+          width:px2rem(142px);
+          height:px2rem(64px);
+          display: block;
+        }
+      }
+      .xiazai_btn{
+        display: block;
+        width:px2rem(600px);
+        height:px2rem(100px);
+        border-radius: px2rem(50px);
+        background: #ff8698;
+        color: #fff;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        @include font-dpr(18px);
+        @include font-normal;
+        position: absolute;
+        bottom: px2rem(80px);
+        right: 50%;
+        margin-right: -(px2rem(300px));
+      }
+  }

@@ -1,0 +1,13 @@
+@import "sassmixins/mixins";
+@import "../cdn/myreset.min.css";
+
+.photo{
+  a{
+    display: block;
+  }
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

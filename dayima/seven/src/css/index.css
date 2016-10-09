@@ -1,0 +1,471 @@
+@import url(../cdn/myreset.min.css);
+* {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+* {
+  -webkit-text-size-adjust: none; }
+
+canvas {
+  width: 100%;
+  height: 100%; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.YoWrap {
+  width: 100%;
+  height: 100%;
+  background: url("../images/background.png") no-repeat center;
+  background-size: 100% auto;
+  overflow: hidden;
+  position: relative; }
+  .YoWrap #blue {
+    width: 0.66667rem;
+    height: 0.66667rem;
+    background: #fcfcfc;
+    position: absolute;
+    right: 0;
+    display: none;
+    bottom: 3.66667rem;
+    z-index: 9999999999999; }
+  .YoWrap .sprite {
+    width: 3.98667rem;
+    height: 1.64rem;
+    position: absolute;
+    bottom: 0.66667rem;
+    left: 50%;
+    margin-left: -2rem;
+    -webkit-transform: scale(0.8);
+    z-index: 9999999;
+    display: none; }
+  .YoWrap .AllControl {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 789898;
+    display: -webkit-box; }
+    .YoWrap .AllControl .AllLeft {
+      width: 50%;
+      height: 100%; }
+    .YoWrap .AllControl .AllRight {
+      width: 50%;
+      height: 100%; }
+  .YoWrap .control {
+    width: 100%;
+    height: 0.86667rem;
+    position: absolute;
+    right: 0;
+    bottom: 0.4rem;
+    z-index: 99999;
+    display: none;
+    box-sizing: border-box; }
+    .YoWrap .control .Cleft,
+    .YoWrap .control .Cright {
+      width: 50%;
+      height: 100%;
+      display: inline-block;
+      line-height: 0.66667rem;
+      text-align: center;
+      z-index: -1; }
+    .YoWrap .control .Cleft {
+      float: left; }
+      .YoWrap .control .Cleft img {
+        margin-left: 10%;
+        width: 0.8rem;
+        height: 0.8rem;
+        float: left; }
+    .YoWrap .control .Cright {
+      float: right; }
+      .YoWrap .control .Cright img {
+        margin-right: 10%;
+        width: 0.8rem;
+        height: 0.8rem;
+        float: right; }
+  .YoWrap #weLove {
+    font-size: 0.4rem;
+    position: absolute;
+    top: 2.66667rem;
+    right: 1.33333rem;
+    font-weight: bold;
+    line-height: 0.4rem;
+    color: #fff; }
+  .YoWrap .loding {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    background: #fff; }
+    .YoWrap .loding #logoDontent {
+      width: 3.85333rem;
+      height: 4.16rem;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: -4.16rem auto 0; }
+      .YoWrap .loding #logoDontent #defuGif {
+        width: 3.85333rem;
+        height: 3.85333rem;
+        display: block; }
+      .YoWrap .loding #logoDontent p {
+        width: 2.26667rem;
+        height: 0.30667rem;
+        margin: 0 auto; }
+        .YoWrap .loding #logoDontent p > img {
+          width: 1.48rem;
+          height: 0.30667rem;
+          float: left; }
+        .YoWrap .loding #logoDontent p > #spot {
+          float: left;
+          height: 0.30667rem;
+          font-size: 0.4rem;
+          line-height: 0.10667rem;
+          letter-spacing: 3px; }
+    .YoWrap .loding #DMlogo {
+      width: 4.61333rem;
+      height: 0.85333rem;
+      position: absolute;
+      left: 50%;
+      bottom: 1.33333rem;
+      margin-left: -2.30667rem; }
+@-webkit-keyframes musicRot {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+  .YoWrap .music {
+    width: 0.66667rem;
+    height: 0.66667rem;
+    background: url("../images/music.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: 0.66667rem;
+    top: 0.66667rem;
+    z-index: 10000;
+    -webkit-animation: musicRot 3s infinite linear; }
+    .YoWrap .music.disable {
+      -webkit-animation: none; }
+  .YoWrap .musicPlay {
+    width: 2.66667rem;
+    height: 2.66667rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99999999; }
+  .YoWrap .YoLogo {
+    width: 4.61333rem;
+    height: 0.85333rem;
+    background: url(../images/logo_11.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: 0.53333rem;
+    bottom: 0.53333rem;
+    z-index: 0; }
+  .YoWrap .firstArea {
+    width: 100%;
+    height: 100%; }
+  .YoWrap .YoContent {
+    display: -webkit-box;
+    -webkit-box-pack: right;
+    -webkit-box-align: end;
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    -webkit-transition: opacity 5s; }
+    .YoWrap .YoContent .cover_first {
+      width: 50%;
+      height: 108%;
+      position: absolute;
+      top: -8%;
+      right: 50%; }
+      .YoWrap .YoContent .cover_first .firstBack {
+        width: 0;
+        height: 100%;
+        padding-bottom: 0.69333rem;
+        background: url(../images/firstBack.png) no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        right: 0;
+        top: 0; }
+    .YoWrap .YoContent .book {
+      width: 50%;
+      height: 100%;
+      background: url("../images/bookcoverBorder.png") no-repeat right top;
+      background-size: 100%;
+      padding: 3px  3px 0 0;
+      box-sizing: border-box;
+      position: absolute;
+      right: 0;
+      top: 0;
+      box-shadow: 3px 10px 20px #ccc; }
+      .YoWrap .YoContent .book .flipbook {
+        width: 100%;
+        height: 100%; }
+        .YoWrap .YoContent .book .flipbook .Mpage {
+          display: -webkit-box;
+          -webkit-box-pack: center;
+          -webkit-box-align: center; }
+          .YoWrap .YoContent .book .flipbook .Mpage#Mpage1 .imgWarp {
+            border-top: 0;
+            border-bottom: 0; }
+          .YoWrap .YoContent .book .flipbook .Mpage#Mpage1 img {
+            border: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0; }
+          .YoWrap .YoContent .book .flipbook .Mpage .imgWarp {
+            width: 100%;
+            height: 100%;
+            border-top: 0.26667rem solid #fff;
+            border-bottom: 0.26667rem solid #fff;
+            box-sizing: border-box;
+            overflow: hidden; }
+            .YoWrap .YoContent .book .flipbook .Mpage .imgWarp img {
+              width: auto;
+              height: 100%;
+              border: 2px solid #000;
+              margin: 0 auto;
+              box-sizing: border-box; }
+@-webkit-keyframes scaleUp {
+  0% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0); } }
+@-webkit-keyframes scaleDown {
+  0% {
+    -webkit-transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1); } }
+          .YoWrap .YoContent .book .flipbook .Mpage#Mpage13 .tear1 {
+            width: 1.33333rem;
+            height: 1.33333rem;
+            position: absolute;
+            left: 5.33333rem;
+            bottom: 3.33333rem; }
+            .YoWrap .YoContent .book .flipbook .Mpage#Mpage13 .tear1 .tear {
+              width: 0.66667rem;
+              height: 0.66667rem;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              margin-left: -0.33333rem;
+              margin-top: -0.33333rem;
+              -webkit-transform: scale(1);
+              /* -webkit-animation: scaleUp 2s forwards ;
+               -webkit-animation-iteration-count: 1;*/ }
+            .YoWrap .YoContent .book .flipbook .Mpage#Mpage13 .tear1 .tearS {
+              width: 1.33333rem;
+              height: 1.33333rem;
+              position: absolute;
+              left: 0;
+              top: 0;
+              -webkit-transform: scale(0);
+              opacity: 0.7;
+              /*-webkit-animation: scaleDown 2.5s forwards;
+              -webkit-animation-iteration-count: 1;*/ }
+          .YoWrap .YoContent .book .flipbook .Mpage#Mpage13 .tear2 {
+            width: 2.13333rem;
+            height: 2.13333rem;
+            position: absolute;
+            left: 4rem;
+            bottom: 4rem; }
+            .YoWrap .YoContent .book .flipbook .Mpage#Mpage13 .tear2 .tear {
+              width: 0.8rem;
+              height: 0.8rem;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              margin-left: -0.4rem;
+              margin-top: -0.4rem;
+              -webkit-transform: scale(1); }
+            .YoWrap .YoContent .book .flipbook .Mpage#Mpage13 .tear2 .tearS {
+              width: 2.13333rem;
+              height: 2.13333rem;
+              position: absolute;
+              left: 0;
+              top: 0;
+              -webkit-transform: scale(0);
+              opacity: 0.6; }
+          .YoWrap .YoContent .book .flipbook .Mpage#Mpage13 .tear3 {
+            width: 1.86667rem;
+            height: 1.86667rem;
+            position: absolute;
+            left: 5.86667rem;
+            bottom: 6.66667rem; }
+            .YoWrap .YoContent .book .flipbook .Mpage#Mpage13 .tear3 .tear {
+              width: 0.53333rem;
+              height: 0.53333rem;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              margin-left: -0.26667rem;
+              margin-top: -0.26667rem;
+              -webkit-transform: scale(1); }
+            .YoWrap .YoContent .book .flipbook .Mpage#Mpage13 .tear3 .tearS {
+              width: 1.86667rem;
+              height: 1.86667rem;
+              position: absolute;
+              left: 0;
+              top: 0;
+              -webkit-transform: scale(0);
+              opacity: 0.4; }
+        .YoWrap .YoContent .book .flipbook #Mpage9 {
+          position: relative;
+          z-index: 1; }
+          .YoWrap .YoContent .book .flipbook #Mpage9 .people {
+            width: 9.52rem;
+            height: 16.88rem;
+            position: absolute;
+            left: 0;
+            top: 1.33333rem;
+            z-index: 11; }
+            .YoWrap .YoContent .book .flipbook #Mpage9 .people .boy {
+              position: absolute;
+              left: 1.13333rem;
+              top: 0;
+              z-index: 3;
+              width: 9.52rem;
+              height: 16.88rem;
+              background: url("../images/boy.png") no-repeat;
+              background-size: 80% 80%;
+              display: none; }
+            .YoWrap .YoContent .book .flipbook #Mpage9 .people .girl {
+              position: absolute;
+              right: 1.13333rem;
+              top: 3.4rem;
+              z-index: 2;
+              width: 3.69333rem;
+              height: 9.8rem;
+              background: url("../images/girl.png") no-repeat;
+              background-size: 80% 80%; }
+        .YoWrap .YoContent .book .flipbook #Mpage16 {
+          position: relative; }
+          .YoWrap .YoContent .book .flipbook #Mpage16 .star_wrap {
+            position: absolute;
+            left: 0;
+            top: 0; }
+        .YoWrap .YoContent .book .flipbook #Mpage6 > .text {
+          width: 4.53333rem;
+          height: 2.66667rem;
+          position: absolute;
+          left: 3.16rem;
+          top: 10.4rem;
+          color: #000;
+          -webkit-transform: rotate(-9deg) scale(0.8);
+          word-break: break-all; }
+          .YoWrap .YoContent .book .flipbook #Mpage6 > .text p {
+            text-indent: 2em;
+            line-height: 0.56rem;
+            font-size: 0.21333rem;
+            font-family: "HY QIHEI50" !important; }
+        .YoWrap .YoContent .book .flipbook .page {
+          background: #fff; }
+        .YoWrap .YoContent .book .flipbook .firstCover {
+          width: 100%;
+          height: 100%;
+          background: url(../images/firstCover.png) no-repeat;
+          background-size: 100% 100%; }
+        .YoWrap .YoContent .book .flipbook #eightText > div {
+          width: 4.66667rem;
+          height: 5.73333rem;
+          position: absolute;
+          left: 0;
+          bottom: -0.74667rem;
+          text-indent: 2em;
+          line-height: 0.4rem;
+          margin-left: 2.88rem;
+          font-size: 12px;
+          font-family: "HY QIHEI50" !important;
+          -webkit-transform: rotate(-10deg); }
+          [data-dpr="2"] .YoWrap .YoContent .book .flipbook #eightText > div {
+            font-size: 24px; }
+            @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+              [data-dpr="2"] .YoWrap .YoContent .book .flipbook #eightText > div {
+                font-size: 48px; } }
+          [data-dpr="3"] .YoWrap .YoContent .book .flipbook #eightText > div {
+            font-size: 36px; }
+            @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+              [data-dpr="3"] .YoWrap .YoContent .book .flipbook #eightText > div {
+                font-size: 72px; } }
+          @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+            .YoWrap .YoContent .book .flipbook #eightText > div {
+              font-size: 24px; } }
+          .YoWrap .YoContent .book .flipbook #eightText > div > p:nth-child(2) {
+            margin-top: 0.53333rem; }
+  .YoWrap .lastBack {
+    width: 100%;
+    height: 100%;
+    background: url(../images/lastback.jpg) #fff no-repeat left bottom;
+    background-size: 100% auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0; }
+    .YoWrap .lastBack .starSprite {
+      width: 10rem;
+      height: 5.33333rem;
+      position: absolute;
+      left: 0;
+      bottom: 4rem; }
+      .YoWrap .lastBack .starSprite canvas {
+        width: 100%;
+        height: 100%; }
+    .YoWrap .lastBack .lastbackLo {
+      width: 3.36rem;
+      height: 1.93333rem;
+      position: absolute;
+      left: -0.17333rem;
+      top: -0.33333rem;
+      background: url(../images/yezi.png) no-repeat;
+      background-size: 100%; }
+    .YoWrap .lastBack .href {
+      width: 100%;
+      height: 0.57333rem;
+      position: fixed;
+      left: 0;
+      bottom: 3.73333rem;
+      z-index: 999999999999; }
+@-webkit-keyframes backPlay {
+  0% {
+    background: url("../images/redback.png") no-repeat;
+    background-size: 100%; }
+  100% {
+    background: url("../images/whiteBack.png") no-repeat;
+    background-size: 100%; } }
+      .YoWrap .lastBack .href .localHref {
+        width: 3.49333rem;
+        height: 0.57333rem;
+        margin: 0 auto;
+        background: url("../images/whiteBack.png") no-repeat;
+        background-size: 100%;
+        -webkit-animation: backPlay 3s linear infinite alternate; }
+    .YoWrap .lastBack .logoText {
+      width: 5.97333rem;
+      height: 0.42667rem;
+      background: url(../images/lastText.png) no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 50%;
+      bottom: 2.93333rem;
+      margin-left: -2.98667rem; }
+    .YoWrap .lastBack .lastYoLogo {
+      width: 4.61333rem;
+      height: 0.85333rem;
+      background: url(../images/logo_11.png) no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 50%;
+      bottom: 1.33333rem;
+      z-index: 0;
+      margin-left: -2.30667rem; }
+
+/*# sourceMappingURL=index.css.map */

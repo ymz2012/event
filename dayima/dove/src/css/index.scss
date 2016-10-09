@@ -1,0 +1,24 @@
+@import "sassmixins/mixins";
+@import "../cdn/myreset.min.css";
+
+.content{
+  width: px2rem(750px);
+  height: px2rem(1263px);
+  background: url("../images/dove_bg.jpg") no-repeat center center;
+  background-size: 100% 100%;
+  padding-top: px2rem(1000px);
+  box-sizing: border-box;
+  .xiazai_btn{
+    width: 100%;
+    height: px2rem(90px);
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    img{
+      height: 100%;
+      width: auto;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}

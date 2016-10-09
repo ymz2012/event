@@ -1,0 +1,22 @@
+@import url(../cdn/myreset.min.css);
+* {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.box {
+  width: 10rem;
+  height: 17.78667rem;
+  background: url("../../image/message/message_bg.png") no-repeat center;
+  background-size: 100% 100%; }
+  .box .download {
+    width: 10rem;
+    height: 1.57333rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../../image/message/download_bg.png") no-repeat center;
+    background-size: contain; }
+
+/*# sourceMappingURL=message.css.map */

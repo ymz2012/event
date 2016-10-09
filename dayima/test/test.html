@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <button id="btn">111</button>
+</body>
+<script>
+    document.getElementById('btn').addEventListener('click',function(){
+        var index = window.name; //先得到当前iframe层的索引
+        parent.document.getElementsByName(index)[0].style.display='none'; //再执行关闭
+    },false)
+</script>
+</html>

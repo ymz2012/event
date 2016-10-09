@@ -1,0 +1,18 @@
+@import "../sassmixins/_mixins.scss";
+@import "../cdn/myreset.min.css";
+.box{
+  width: 10rem;
+  height:px2rem(1334px);
+  background:url("../../image/message/message_bg.png") no-repeat center;
+  background-size: 100% 100%;
+  .download{
+    width:px2rem(750px);
+    height:px2rem(118px);
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+    background:url("../../image/message/download_bg.png") no-repeat center;
+    background-size:contain;
+  }
+}

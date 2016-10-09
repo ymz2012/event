@@ -1,0 +1,26 @@
+@import url(../cdn/myreset.min.css);
+* {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.content {
+  width: 10rem;
+  height: 16.84rem;
+  background: url("../images/dove_bg.jpg") no-repeat center center;
+  background-size: 100% 100%;
+  padding-top: 13.33333rem;
+  box-sizing: border-box; }
+  .content .xiazai_btn {
+    width: 100%;
+    height: 1.2rem;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center; }
+    .content .xiazai_btn img {
+      height: 100%;
+      width: auto;
+      margin: 0 auto;
+      display: block; }
+
+/*# sourceMappingURL=index.css.map */

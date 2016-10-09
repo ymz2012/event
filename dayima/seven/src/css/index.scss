@@ -1,0 +1,565 @@
+@import "./sassmixins/mixins";
+@import "../cdn/myreset.min.css";
+*{
+  -webkit-text-size-adjust: none;
+}
+
+canvas{
+  width: 100%;
+  height: 100%;
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+.YoWrap{
+  width:100%;
+  height:100%;
+  background:url('../images/background.png') no-repeat center;
+  background-size:100% auto ;
+  overflow:hidden;
+  position:relative;
+  #blue{
+    width:px2rem(50px);
+    height:px2rem(50px);
+    background:#fcfcfc;
+    position:absolute;
+    right:0;
+    display:none;
+    bottom:px2rem(275px);
+
+    z-index: 9999999999999;
+  }
+  .sprite{
+    width:px2rem(299px);
+    height:px2rem(123px);
+    position:absolute;
+    bottom:px2rem(50px);
+    left:50%;
+    margin-left:px2rem(-150px);
+    -webkit-transform:scale(0.8);
+    z-index: 9999999;
+    display:none;
+  }
+  .AllControl{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    display:none;
+    z-index: 789898;
+    display:-webkit-box;
+    .AllLeft{
+      width:50%;
+      height:100%;
+    }
+    .AllRight{
+      width:50%;
+      height:100%;
+    }
+  }
+  .control{
+    width:100%;
+    height:px2rem(65px);
+    position: absolute;
+    right:0;
+    bottom:px2rem(30px);
+    z-index: 99999;
+    display:none;
+    box-sizing:border-box;
+    .Cleft,
+    .Cright{
+      width:50%;
+      height:100%;
+      display:inline-block;
+      line-height:px2rem(50px);
+      text-align:center;
+      z-index: -1;
+    }
+    .Cleft{
+      float:left;
+      img{
+        margin-left:10%;
+        width:px2rem(60px);
+        height:px2rem(60px);
+        float: left;
+      }
+    }
+    .Cright{
+      float:right;
+      img{
+        margin-right:10%;
+        width:px2rem(60px);
+        height:px2rem(60px);
+        float: right;
+      }
+    }
+
+  }
+
+  #weLove{
+    font-size: px2rem(30px);
+    position:absolute;
+    top:px2rem(200px);
+    right:px2rem(100px);
+    font-weight: bold;
+    line-height:px2rem(30px);
+    color:#fff;
+  }
+  .loding{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:9999999;
+    background:#fff;
+    #logoDontent{
+      width:px2rem(289px);
+      height:px2rem(312px);
+      position:absolute;
+      top:50%;
+
+      left:0;
+      right:0;
+      margin:px2rem(-312px) auto 0;
+
+      #defuGif{
+        width:px2rem(289px);
+        height:px2rem(289px);
+        display:block;
+      }
+      p{
+        width:px2rem(170px);
+        height:px2rem(23px);
+        margin:0 auto;
+          &>img{
+            width:px2rem(111px);
+            height:px2rem(23px);
+            float: left;
+          }
+          &>#spot{
+            float: left;
+            height:px2rem(23px);
+            font-size: px2rem(30px);
+            line-height:px2rem(8px);
+            letter-spacing: 3px;
+          }
+      }
+
+    }
+    #DMlogo{
+      width:px2rem(346px);
+      height:px2rem(64px);
+      position:absolute;
+      left:50%;
+      bottom:px2rem(100px);
+      margin-left:px2rem(-173px);
+    }
+  }
+  @-webkit-keyframes musicRot {
+    0%{
+      -webkit-transform:rotate(0deg);
+    }
+    100%{
+      -webkit-transform:rotate(360deg);
+    }
+  }
+  .music{
+    width:px2rem(50px);
+    height:px2rem(50px);
+    background: url('../images/music.png') no-repeat;
+    background-size:100% ;
+    position:absolute;
+    right:px2rem(50px);
+    top:px2rem(50px);
+    z-index:10000;
+    -webkit-animation: musicRot 3s infinite linear ;
+    &.disable{
+      -webkit-animation: none ;
+    }
+  }
+  .musicPlay{
+      width:px2rem(200px);
+      height:px2rem(200px);
+      position:absolute;
+      right:0;
+      top:0;
+    z-index:99999999;
+  }
+
+  .YoLogo{
+    width:px2rem(346px);
+    height:px2rem(64px);
+    background: url(../images/logo_11.png) no-repeat;
+    background-size:100%;
+    position:absolute;
+    right:px2rem(40px);
+    bottom:px2rem(40px);
+    z-index:0;
+  }
+  .firstArea{
+    width: 100%;
+    height: 100%;
+  }
+  .YoContent{
+    display:-webkit-box;
+    -webkit-box-pack:right;
+    -webkit-box-align:end;
+    position:relative;
+    z-index:10;
+    opacity:1;
+    -webkit-transition: opacity 5s;
+    .cover_first{
+      width:50%;
+      height:108%;
+
+      position: absolute;
+      top:-8%;
+      right: 50%;
+      .firstBack{
+        width:0;
+        height:100%;
+        padding-bottom: px2rem(52px);
+        background:url(../images/firstBack.png) no-repeat;
+        background-size:100% 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    .book{
+      width:50%;
+      height:100%;
+      background:url("../images/bookcoverBorder.png") no-repeat right top ;
+      background-size:100%;
+      padding:3px  3px 0 0;
+      box-sizing:border-box;
+      position: absolute;
+      right: 0;
+      top: 0;
+      box-shadow: 3px 10px 20px #ccc;
+      .flipbook{
+        width:100%;
+        height:100%;
+        .Mpage{
+          display: -webkit-box;
+          -webkit-box-pack: center;
+          -webkit-box-align: center;
+          &#Mpage1 {
+            .imgWarp{
+              border-top: 0;
+              border-bottom: 0;
+            }
+            img {
+              border: 0;
+              width: 100%;
+              height: 100%;
+              margin: 0;
+            }
+          }
+          .imgWarp {
+            width: 100%;
+            height: 100%;
+            border-top: px2rem(20px) solid #fff;
+            border-bottom: px2rem(20px) solid #fff;
+            box-sizing: border-box;
+            overflow: hidden;
+            img {
+              width: auto;
+              height: 100%;
+              border:2px solid #000;
+              margin:0 auto;
+              box-sizing: border-box;
+            }
+          }
+          &#Mpage13{
+
+
+            @-webkit-keyframes scaleUp{
+              0%{
+                -webkit-transform: scale(1);
+              }
+              100%{
+                -webkit-transform: scale(0);
+              }
+            }
+            @-webkit-keyframes scaleDown{
+              0%{
+                -webkit-transform: scale(0);
+              }
+              100%{
+                -webkit-transform: scale(1);
+              }
+            }
+            .tear1{
+              width: px2rem(100px);
+              height: px2rem(100px);
+              position: absolute;
+              left: px2rem(400px);
+              bottom:px2rem(250px);
+
+              .tear{
+                width: px2rem(50px);
+                height: px2rem(50px);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: px2rem(-25px);
+                margin-top: px2rem(-25px);
+                -webkit-transform: scale(1);
+                /* -webkit-animation: scaleUp 2s forwards ;
+                 -webkit-animation-iteration-count: 1;*/
+              }
+              .tearS{
+                width: px2rem(100px);
+                height: px2rem(100px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                -webkit-transform: scale(0);
+                opacity:0.7;
+                /*-webkit-animation: scaleDown 2.5s forwards;
+                -webkit-animation-iteration-count: 1;*/
+              }
+            }
+            .tear2{
+              width: px2rem(160px);
+              height: px2rem(160px);
+              position: absolute;
+              left: px2rem(300px);
+              bottom:px2rem(300px);
+
+              .tear{
+                width: px2rem(60px);
+                height: px2rem(60px);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: px2rem(-30px);
+                margin-top: px2rem(-30px);
+                -webkit-transform: scale(1);
+
+              }
+              .tearS{
+                width: px2rem(160px);
+                height: px2rem(160px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                -webkit-transform: scale(0);
+                opacity:0.6;
+              }
+            }
+            .tear3{
+              width: px2rem(140px);
+              height: px2rem(140px);
+              position: absolute;
+              left: px2rem(440px);
+              bottom:px2rem(500px);
+
+              .tear{
+                width: px2rem(40px);
+                height: px2rem(40px);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: px2rem(-20px);
+                margin-top: px2rem(-20px);
+                -webkit-transform: scale(1);
+              }
+              .tearS{
+                width: px2rem(140px);
+                height: px2rem(140px);
+                position: absolute;
+                left: 0;
+                top: 0;
+                -webkit-transform: scale(0);
+                opacity:0.4;
+              }
+            }
+          }
+
+        }
+        #Mpage9{
+          position:relative;
+          z-index:1;
+
+
+          .people{
+            width:px2rem(714px);
+            height:px2rem(1266px);
+            position: absolute;
+            left:0;
+            top:px2rem(100px);
+            z-index:11;
+            .boy{
+              position: absolute;
+              left: px2rem(85px);
+              top: 0;
+              z-index: 3;
+              width:px2rem(714px);
+              height:px2rem(1266px);
+              background: url("../images/boy.png") no-repeat;
+              background-size:80% 80%;
+              display:none;
+            }
+            .girl{
+              position: absolute;
+              right: px2rem(85px);
+              top: px2rem(255px);
+              z-index: 2;
+              width:px2rem(277px);
+              height:px2rem(735px);
+              background: url("../images/girl.png") no-repeat;
+              background-size:80% 80%;
+            }
+          }
+
+
+        }
+        #Mpage16{
+          position:relative;
+          .star_wrap{
+            position:absolute;
+            left:0;
+            top:0;
+          }
+
+        }
+        #Mpage6 > .text{
+          width:px2rem(340px);
+          height:px2rem(200px);
+          position:absolute;
+          left:px2rem(237px);
+          top:px2rem(780px);
+          color:#000;
+          -webkit-transform: rotate(-9deg) scale(0.8);
+          word-break: break-all;
+          p{
+            text-indent:2em;
+            line-height:px2rem(42px);
+            font-size:px2rem(16px);
+            @include  font-normal;
+          }
+        }
+        .page{
+          background: #fff;
+        }
+        .firstCover{
+          width:100%;
+          height:100%;
+          background:url(../images/firstCover.png) no-repeat;
+          background-size:100% 100%;
+        }
+
+        #eightText > div{
+          width:px2rem(350px);
+          height:px2rem(430px);
+
+          position:absolute;
+          left:0;
+          bottom:px2rem(-56px);
+          text-indent: 2em;
+          line-height:px2rem(30px);
+          margin-left: px2rem(216px);
+          @include font-dpr(12px);
+          @include font-normal;
+          -webkit-transform: rotate(-10deg);
+          &>p:nth-child(2) {
+            margin-top:px2rem(40px);
+          }
+        }
+      }
+    }
+
+
+
+
+  }
+  .lastBack{
+    width:100%;
+    height:100%;
+    background:url(../images/lastback.jpg) #fff no-repeat left bottom;
+    background-size:100% auto;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index: 1;
+    opacity:0;
+    .starSprite{
+      width: 10rem;
+      height: px2rem(400px);
+      position: absolute;
+      left: 0;
+      bottom:px2rem(300px);
+      canvas{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .lastbackLo{
+      width:px2rem(252px);
+      height:px2rem(145px);
+      position:absolute;
+      left:px2rem(-13px);
+      top:px2rem(-25px);
+      background:url(../images/yezi.png) no-repeat;
+      background-size:100%;
+    }
+    .href{
+      width:100%;
+      height:px2rem(43px);
+      position:fixed;
+      left:0;
+      bottom:px2rem(280px);
+      z-index: 999999999999;
+
+      @-webkit-keyframes backPlay{
+        0%{
+          background:url('../images/redback.png') no-repeat;
+          background-size:100%;
+        }
+        100%{
+          background:url('../images/whiteBack.png') no-repeat;
+          background-size:100%;
+
+        }
+      }
+
+      .localHref{
+        width:px2rem(262px);
+        height:px2rem(43px);
+        margin:0 auto;
+        background:url('../images/whiteBack.png') no-repeat;
+        background-size:100%;
+        -webkit-animation:backPlay 3s linear infinite alternate;
+      }
+    }
+    .logoText{
+      width:px2rem(448px);
+      height:px2rem(32px);
+      background:url(../images/lastText.png) no-repeat;
+      background-size:100%;
+      position:absolute;
+      left:50%;
+
+      bottom:px2rem(220px);
+      margin-left:px2rem(-224px);
+    }
+    .lastYoLogo{
+      width:px2rem(346px);
+      height:px2rem(64px);
+      background: url(../images/logo_11.png) no-repeat;
+      background-size:100%;
+      position:absolute;
+      left:50%;
+      bottom:px2rem(100px);
+
+      z-index:0;
+      margin-left:px2rem(-173px);
+    }
+  }
+}
